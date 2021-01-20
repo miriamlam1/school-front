@@ -1,1 +1,8 @@
-<p>label works!</p>
+<h2>My Labels</h2>
+<ul class="labels">
+  <li *ngFor="let label of labels"
+    [class.selected]="label === selectedLabel"
+    (click)="onSelect(label)">
+    {{label.style}} {{label.color}} {{label.pattern}}
+  </li>
+</ul>
