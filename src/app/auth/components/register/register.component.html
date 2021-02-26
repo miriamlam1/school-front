@@ -1,0 +1,27 @@
+<form [formGroup]="RegisterForm">
+    <label>
+        First Name:
+        <input type="text" formControlName="FirstName">
+    </label>
+
+    <label>
+        Last Name:
+        <input type="text" formControlName="Lastname">
+    </label>
+    <br/>
+    <label>
+        Email:
+        <input type="text" formControlName="Email">
+    </label>
+    <br/>
+    <label>
+        Password:
+        <input type="password" formControlName="Password">
+    </label>
+    <br/>
+</form>
+
+<form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+    <button type="submit" [disabled]="!RegisterForm.valid">Register</button>
+</form>
+

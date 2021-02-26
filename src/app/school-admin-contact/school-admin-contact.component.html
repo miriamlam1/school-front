@@ -1,0 +1,32 @@
+<form [formGroup]="AdminForm">
+    <label>
+        First Name:
+        <input type="text" formControlName="FirstName">
+    </label>
+
+    <label>
+        Last Name:
+        <input type="text" formControlName="LastName">
+    </label>
+    <br/>
+    <label>
+        Email:
+        <input type="text" formControlName="Email">
+    </label>
+
+    <label>
+        Phone Number:
+        <input type="text" formControlName="PhoneNumber">
+    </label>
+
+    <label>
+        School Position
+        <input type="text" formControlName="SchoolPosition">
+    </label>
+    <br/>
+</form>
+
+<form [formGroup]="AdminForm" (ngSubmit)="onSubmit()">
+    <button type="submit" [disabled]="!AdminForm.valid">Submit</button>
+</form>
+
