@@ -1,32 +1,62 @@
-<form [formGroup]="AdminForm">
-    <label>
-        First Name:
-        <input type="text" formControlName="FirstName">
-    </label>
-
-    <label>
-        Last Name:
-        <input type="text" formControlName="LastName">
-    </label>
+<form class="row g-3" [formGroup]="AdminForm">
     <br/>
-    <label>
-        Email:
-        <input type="text" formControlName="Email">
-    </label>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">First name</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="FirstName" placeholder="Mark" required>
 
-    <label>
-        Phone Number:
-        <input type="text" formControlName="PhoneNumber">
-    </label>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">Last name</label>
+      <input type="text" class="form-control " id="validationServer02" formControlName="LastName" placeholder="Otto" required>
 
-    <label>
-        School Position
-        <input type="text" formControlName="SchoolPosition">
-    </label>
+    </div>
     <br/>
-</form>
 
-<form [formGroup]="AdminForm" (ngSubmit)="onSubmit()">
-    <button type="submit" [disabled]="!AdminForm.valid">Submit</button>
-</form>
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">Email</label>
+        <input type="text" class="form-control " id="validationServer02" formControlName="Email" placeholder="example@gmail.com" required>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">PhoneNumber</label>
+      <input type="text" class="form-control " id="validationServer03" formControlName="PhoneNumber" placeholder="(805)123-4567" required>
+
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">School Position</label>
+        <input type="text" class="form-control " id="validationServer03" formControlName="SchoolPosition" placeholder="Principle" required>
+
+    </div>
+    <br/>
+    <br/>
+    <br/>    
+    <br/>    
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="col-12">
+        <form [formGroup]="AdminForm" (ngSubmit)="onSubmit()">
+            <button class="btn btn-primary" type="submit" [disabled]="!AdminForm.valid">Submit</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+
+
 
