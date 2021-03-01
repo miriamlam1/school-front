@@ -1,18 +1,22 @@
-<app-header [isUserLoggedIn] = "true"></app-header>
-<form [formGroup]="LoginForm">
-    <label>
-        Email:
-        <input type="text" formControlName="Email">
-    </label>
+<form class="row g-3"  [formGroup]="LoginForm">
+    <div class="mb-3 col" >
+        <label for="validationServer02" class="form-label">Email</label>
+        <input type="text"  class="form-control " id="validationServer02" formControlName="Email" placeholder="example@gmail.com" required>
+    </div>
     <br/>
-    <label>
-        Password:
-        <input type="password" formControlName="Password">
-    </label>
     <br/>
-</form>
+    <div class="mb-3 col">
+      <label for="validationServer03" class="form-label">Password</label>
+      <input type="password" class="form-control " id="validationServer03" formControlName="Password" required>
 
-<form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
-    <button type="submit" [disabled]="!LoginForm.valid">Login</button>
-</form>
+    </div>
+    <div class="col-12">
+        <form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+            <button class="btn btn-primary" type="submit" [disabled]="!LoginForm.valid">Login</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
 

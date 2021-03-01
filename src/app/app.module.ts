@@ -20,7 +20,7 @@ import { SettingsComponent } from './settings/settings.component';
 
 
 const ROUTES: Routes = [
-  { path: 'login', component: LoginComponent},
+  { path: '', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'settings', component: SettingsComponent} 

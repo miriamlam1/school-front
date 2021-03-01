@@ -19,7 +19,8 @@ export class LoginComponent {
   });
 
   onLogin(){
-    if( this.getEmail() == this.LoginForm.value.Email && this.getPassword() == this.LoginForm.value.Password)
+    if( this.getEmail() == this.LoginForm.value.Email && 
+    this.getPassword() == this.LoginForm.value.Password)
     {
       this.router.navigate(['./home']);
       this.revert();

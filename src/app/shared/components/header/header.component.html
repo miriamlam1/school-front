@@ -1,26 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="!isUserLoggedIn">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> 
-      <img src="assets/GEN_logo_PMS.png">
-    </a>
-    <button class="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <app-login></app-login>
-      </a>
-    </div>
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark " *ngIf="isUserLoggedIn">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+  <div class="container-fluid" >
     <a class="navbar-brand"> 
       <img src="assets/GEN_logo_PMS.png">
     </a>
@@ -32,7 +11,7 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav" >
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         <li class="nav-item active">
           <a class="nav-link" routerLink="/home">Home</a>
@@ -41,9 +20,7 @@
           <a class="nav-link" routerLink="/settings">Settings</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" (ngSubmit)="Logout()">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
-      </form>
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="onLogout()">Logout</button>
     </div>
   </div>
   

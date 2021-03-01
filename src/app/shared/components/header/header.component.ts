@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +9,9 @@ import { Router, RouterModule } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router){
 
-  }
-  @Input() public title: string;
-  @Input() public isUserLoggedIn: boolean;
-
+  } 
   onLogout(){
-    this.router.navigate(['./login']);
-    this.isUserLoggedIn = false;
+    this.router.navigate(['./']);
   }
 
 }
