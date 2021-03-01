@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +8,9 @@ import { FormGroup, FormControl, Validators} from '@angular/forms'
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  constructor(private router: Router){
 
+  }
   RegisterForm = new FormGroup({
     FirstName: new FormControl('', [Validators.required]),
     Lastname: new FormControl('', [Validators.required]),
@@ -16,6 +19,6 @@ export class RegisterComponent {
   });
 
   onRegister(){
-    
+    this.router.navigate(['./home']);
   }
 }
