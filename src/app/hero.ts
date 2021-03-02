@@ -1,5 +1,4 @@
-export class Hero {
-    id: number;
-    name: string;
-    saying: string;
-  }
+export interface Hero {
+  id: number;
+  name: string;
+}
