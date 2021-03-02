@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container light-style flex-grow-1 container-p-y">
+
+    <h4 class="font-weight-bold py-3 mb-4">
+    Settings
+    </h4>
+
+    <div class="card overflow-hidden">
+      <div class="row no-gutters row-bordered row-border-light">
+        <div class="col-md-3 pt-0">
+          <div class="list-group list-group-flush account-settings-links">
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-contact form">Contact Form</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-school-form">School Form</a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="tab-content">
+            <div class="tab-pane fade active show" id="account-contact form">
+                <app-school-admin-contact></app-school-admin-contact>
+            </div>
+
+            <div class="tab-pane fade " id="account-school-form">
+                <app-school-form></app-school-form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

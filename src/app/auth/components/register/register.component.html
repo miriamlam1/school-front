@@ -1,0 +1,31 @@
+<form class="row g-3"  [formGroup]="RegisterForm">
+    <div class="col-md-4" >
+        <label for="validationServer02" class="form-label">First Name</label>
+        <input type="text"  class="form-control " id="validationServer02" formControlName="FirstName" placeholder="William" required>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">Last name</label>
+      <input type="text" class="form-control " id="validationServer03" formControlName="LastName" placeholder="Paterson" required>
+
+    </div>
+    <div class="col-md-6" >
+        <label for="validationServer02" class="form-label">Email</label>
+        <input type="email"  class="form-control " id="validationServer02" formControlName="Email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">Password</label>
+      <input type="password" class="form-control " id="validationServer03" formControlName="Password" required>
+
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-12">
+        <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+            <button class="btn btn-primary" type="submit" [disabled]="!RegisterForm.valid">Register</button>
+        </form>
+    </div>
+  </form>
+

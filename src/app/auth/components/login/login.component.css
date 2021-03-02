@@ -1,0 +1,10 @@
+body,html {
+    height: 100%;
+}
+
+#profile-img {
+    height:180px;
+}
+.h-80 {
+    height: 1000% !important;
+}

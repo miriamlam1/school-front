@@ -1,0 +1,34 @@
+<form [formGroup]="SchoolForm">
+    <label>
+        Institution Name:
+        <input type="text" formControlName="InstitutionName"  >
+    </label>
+
+    <label>
+        Phone Number:
+        <input type="text" formControlName="PhoneNumber" >
+    </label>
+
+    <br/>
+    <br/>
+    <label>
+        Street Address:
+        <input type="text" formControlName="Address" >
+    </label>
+
+    <label>
+        City:
+        <input type="text" formControlName="City" >
+    </label>
+    
+    <label>
+        Postcode:
+        <input type="text" formControlName="Postcode" >
+    </label>
+
+</form>
+
+<form [formGroup]="SchoolForm" (ngSubmit)="onSubmit()">
+    <button type="submit"[disabled]="!SchoolForm.valid">Submit</button>
+</form>
+

@@ -1,0 +1,35 @@
+<div class="container h-80">
+    <div class="row align-items-center h-100">
+        <div class="col-3 mx-auto">
+            <div class="text-left">
+                <img id="profile-img"  src="assets/GEN_logo_PMS.png" />
+                <p id="profile-name" class="profile-name-card" class="text-center">Login</p>
+
+<form class="form-signin"  [formGroup]="LoginForm">
+    <div class="mb-3 col" >
+        <label for="validationServer02" class="form-label">Email</label>
+        <input type="text"  class="form-control " id="validationServer02" formControlName="Email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div class="mb-3 col">
+      <label for="validationServer03" class="form-label">Password</label>
+      <input type="password" class="form-control " id="validationServer03" formControlName="Password" required>
+
+    </div>
+    <div class="col-12">
+        <form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+            <button class="btn btn-primary" type="submit" [disabled]="!LoginForm.valid">Login</button>
+        </form>
+    </div>
+    <li class="nav-link text-left" >
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+            </div>
+</div>
+</div>
+</div>
+
