@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 import { UploadComponent } from './upload/upload.component';
 import { LabelComponent } from './label/label.component';
+import { DisplayLabelsComponent } from './display-labels/display-labels.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 const routes: Routes = [
   // { path: 'upload', component: UploadComponent}
@@ -17,7 +19,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     UploadComponent,
-    LabelComponent
+    LabelComponent,
+    DisplayLabelsComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,

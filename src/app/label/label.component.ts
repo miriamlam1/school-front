@@ -13,7 +13,7 @@ import { LABELS } from '../label_list';
 export class LabelComponent implements OnInit {
 
   selectedLabel: Label;
-  labels: Label[];
+  labels: any = [];
 
   constructor(private LabelService: LabelService) { }
 
