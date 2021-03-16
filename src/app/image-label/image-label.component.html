@@ -1,0 +1,50 @@
+<form class="row g-3" [formGroup]="AdminForm">
+    <br/>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">URN</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="URN" placeholder="123456">
+
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">perm id</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="perm_id" placeholder="123" required>
+
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">image year</label>
+      <input type="text" class="form-control " id="validationServer02" formControlName="image_year" placeholder="2021" required>
+
+    </div>
+    <br/>
+
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">season</label>
+        <input type="text" class="form-control " id="validationServer02" formControlName="season" placeholder="Summer" required>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">pe kit</label>
+      <input type="text" class="form-control " id="validationServer03" formControlName="pe_kit" placeholder="Yes" required>
+
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+ 
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="col-12">
+        <form [formGroup]="AdminForm" (ngSubmit)="onSubmit()">
+            <button class="btn btn-primary" type="submit" [disabled]="!AdminForm.valid">Submit</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+
+
+

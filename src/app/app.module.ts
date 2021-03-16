@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import {  Routes, RouterModule } from '@angular/router';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -26,12 +27,16 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
+import { PermutationComponent } from './permutation/permutation.component';
+import { ImageLabelComponent } from './image-label/image-label.component';
 
 const ROUTES: Routes = [
   { path: '', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'settings', component: SettingsComponent} 
+  { path: 'settings', component: SettingsComponent},
+  { path: 'schoolForm', component: SchoolFormComponent},
+  { path: 'contactForm', component: SchoolAdminContactComponent}
 ];
 
 @NgModule({
@@ -51,17 +56,20 @@ const ROUTES: Routes = [
     DashboardComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    PermutationComponent,
+    ImageLabelComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES),
     NgbModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]

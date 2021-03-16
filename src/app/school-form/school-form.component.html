@@ -1,34 +1,67 @@
-<form [formGroup]="SchoolForm">
-    <label>
-        Institution Name:
-        <input type="text" formControlName="InstitutionName"  >
-    </label>
+<form class="row g-3" [formGroup]="SchoolForm">
+    <br/>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">URN</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="URN" placeholder="123456">
 
-    <label>
-        Phone Number:
-        <input type="text" formControlName="PhoneNumber" >
-    </label>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">Institution Name</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="Institution_name" placeholder="First Primary School" required>
+
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer03" class="form-label">Phone Number</label>
+      <input type="text" class="form-control " id="validationServer02" formControlName="phone_number" placeholder="(805)123-4567" required>
+
+    </div>
+    <br/>
+
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">Address</label>
+        <input type="text" class="form-control " id="validationServer02" formControlName="address" placeholder="1234 Grey Ln." required>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">Postcode</label>
+      <input type="text" class="form-control " id="validationServer03" formControlName="postcode" placeholder="123456" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">City</label>
+        <input type="text" class="form-control " id="validationServer03" formControlName="city" placeholder="City" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">Primary Key??</label>
+        <input type="text" class="form-control " id="validationServer03" formControlName="primary_key" placeholder="???" required>
+    </div>
+
+
 
     <br/>
     <br/>
-    <label>
-        Street Address:
-        <input type="text" formControlName="Address" >
-    </label>
+    <br/>    
+    <br/>    
 
-    <label>
-        City:
-        <input type="text" formControlName="City" >
-    </label>
-    
-    <label>
-        Postcode:
-        <input type="text" formControlName="Postcode" >
-    </label>
+    <!-- <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div> -->
+    <br/>
+    <br/>
+    <br/>
 
-</form>
+    <div class="col-12">
+        <form [formGroup]="SchoolForm" (ngSubmit)="onSubmit()">
+            <button class="btn btn-primary" type="submit" [disabled]="!SchoolForm.valid">Submit</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
 
-<form [formGroup]="SchoolForm" (ngSubmit)="onSubmit()">
-    <button type="submit"[disabled]="!SchoolForm.valid">Submit</button>
-</form>
+
 

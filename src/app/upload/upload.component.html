@@ -1,2 +1,22 @@
-<img [src]="url"> <br/>
-<input type='file' (change)="onSelectFile($event)">
+
+
+<form class="row g-3" [formGroup]="ImageForm">
+
+    <img [src]="url"> <br/>
+    <input type='file' (change)="onSelectFile($event)">
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="col-12">
+        <form [formGroup]="ImageForm" (ngSubmit)="onSubmit()">
+            <button class="btn btn-primary" type="submit" [disabled]="!ImageForm.valid">Submit</button>
+        </form>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+</form>

@@ -1,24 +1,29 @@
 <form class="row g-3" [formGroup]="AdminForm">
     <br/>
     <div class="col-md-4">
+      <label for="validationServer03" class="form-label">URN</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="URN" placeholder="123456">
+
+    </div>
+    <div class="col-md-4">
       <label for="validationServer03" class="form-label">First name</label>
-      <input type="text" class="form-control " id="validationServer01" formControlName="FirstName" placeholder="Mark" required>
+      <input type="text" class="form-control " id="validationServer01" formControlName="first_name" placeholder="Mark" required>
 
     </div>
     <div class="col-md-4">
       <label for="validationServer03" class="form-label">Last name</label>
-      <input type="text" class="form-control " id="validationServer02" formControlName="LastName" placeholder="Otto" required>
+      <input type="text" class="form-control " id="validationServer02" formControlName="last_name" placeholder="Otto" required>
 
     </div>
     <br/>
 
     <div class="col-md-6">
         <label for="validationServer03" class="form-label">Email</label>
-        <input type="text" class="form-control " id="validationServer02" formControlName="Email" placeholder="example@gmail.com" required>
+        <input type="text" class="form-control " id="validationServer02" formControlName="email" placeholder="example@gmail.com" required>
     </div>
     <div class="col-md-6">
       <label for="validationServer03" class="form-label">PhoneNumber</label>
-      <input type="text" class="form-control " id="validationServer03" formControlName="PhoneNumber" placeholder="(805)123-4567" required>
+      <input type="text" class="form-control " id="validationServer03" formControlName="phone_number" placeholder="(805)123-4567" required>
 
     </div>
 
@@ -28,7 +33,7 @@
 
     <div class="col-md-6">
         <label for="validationServer03" class="form-label">School Position</label>
-        <input type="text" class="form-control " id="validationServer03" formControlName="SchoolPosition" placeholder="Principle" required>
+        <input type="text" class="form-control " id="validationServer03" formControlName="position" placeholder="Principal" required>
 
     </div>
     <br/>
