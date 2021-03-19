@@ -25,11 +25,15 @@ export class PermutationComponent{
       console.log(data)
     })      
 
-    this.revert();
+    //this.revert();
   }
 
   revert(){
     this.PermForm.reset();
+  }
+
+  addFields(){
+    
   }
 
 }

@@ -24,14 +24,18 @@ export class UploadComponent {
       reader.onload = (event) => { // called once readAsDataURL is completed
         this.url = event.target.result as string;
         console.log(this.url);
+        
       }
     }
   }
 
+  jsonobj = {
+    "URN": 123,
+    "photoBase64": this.url
+  }
+
   onSubmit(){
-    this.bodyAPI.addBody(`{ "URN": "test.png",
-      "photoBase64": "`+ this.url + `"
-    }`)
+    this.bodyAPI.addBody(JSON.stringify(this.jsonobj))
     .subscribe(data => {
       console.log(data)
     })      
