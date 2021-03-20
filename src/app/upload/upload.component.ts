@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BodyAPI } from './upload.component.service';
 import { Validators,FormControl, FormGroup } from '@angular/forms';
+import { SchoolFormComponent } from '../school-form/school-form.component';
+import { NONE_TYPE } from '@angular/compiler';
 
 @Component({
   selector: 'app-upload',
@@ -14,11 +16,13 @@ export class UploadComponent {
 
   ImageForm = new FormGroup({});
 
+  filename : File = null
+
   url = '';
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
-
+      this.filename = event.target.files[0];
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
       reader.onload = (event) => { // called once readAsDataURL is completed
@@ -29,13 +33,12 @@ export class UploadComponent {
     }
   }
 
-  jsonobj = {
-    "URN": 123,
-    "photoBase64": this.url
-  }
-
   onSubmit(){
-    this.bodyAPI.addBody(JSON.stringify(this.jsonobj))
+    var jsonobj = {
+      "URN": this.filename.name,
+      "photoBase64": this.url
+    }
+    this.bodyAPI.addBody(JSON.stringify(jsonobj))
     .subscribe(data => {
       console.log(data)
     })      
